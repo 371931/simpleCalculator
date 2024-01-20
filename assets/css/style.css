@@ -1,20 +1,29 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
-body{
+
+body {
     height: 100vh;
+    background: linear-gradient(to right, #3494e6, #ec6ead);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.container{
-    background: #000;
+
+.container {
+    background: #fff;
+    border-radius: 15px;
     width: 450px;
     height: 500px;
     margin: 8% auto;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-.ans{
+
+.ans {
     min-height: 122px;
     grid-column: span 4;
     display: flex;
@@ -24,20 +33,41 @@ body{
     word-wrap: break-word;
     word-break: break-all;
 }
+
 .ans > div:nth-child(1) {
-    color: rgba(255, 255, 255, .75);
+    color: rgba(0, 0, 0, .75);
     font-size: 1.5rem;
     height: 100%;
     padding-top: 10px;
 }
-.ans > div:nth-child(2){
-    color: #fff;
+
+.ans > div:nth-child(2) {
+    color: #000;
     font-size: 2.5rem;
 }
 
-button{
+button {
     font-size: 25px;
     font-weight: 300;
     cursor: pointer;
     user-select: none;
+    background: #6a0572;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #9444cf;
+}
+
+.val.operator {
+    background: #ff6b6b;
+}
+
+.val.dot {
+    background: #1e90ff;
 }
